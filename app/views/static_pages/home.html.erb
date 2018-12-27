@@ -1,6 +1,5 @@
-<% provide(:title, ".home") %>
+<% provide(:title, t(".home")) %>
 <h1><%= t ".sample"%></h1>
 <p>
-  <% ruby_link = link_to t(".ruby"), "http://www.railstutorial.org/"%>
-  <%= raw t(".up", ruby_link:ruby_link)%>
+  <%= raw t(".up")%>
 </p>
