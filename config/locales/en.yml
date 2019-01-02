@@ -34,26 +34,28 @@ en:
     home:
       home: "Home"
       sample: "Sample App"
-      ruby: "Ruby on Rails Tutorial"
-      up: "This is the home page for the %{ruby_link} sample application."
+      up: "This is the home page for the 
+        <a href='http://www.railstutorial.org/'>Ruby on Rails Tutorial</a> sample application."
     about:
       about: "About"
-      ruby: "Ruby on Rails Tutorial"
-      book: "book"
-      ss: "screencast series"
-      rubyonrails: "Ruby on Rails"
-      up: "The %{ruby_link} is a %{book_link} and %{ss_link} to teach web development with 
-        %{rubyonrails_link} This is the sample application for the tutorial."
+      up: "The <a href='http://www.railstutorial.org/'>Ruby on Rails Tutorial</a> 
+        is a <a href='http://www.railstutorial.org/book'>book</a> 
+        and <a href='http://screencasts.railstutorial.org/'>screencast series</a> 
+        to teach web development with <a href='http://www.railstutorial.org/'>Ruby on Rails</a> 
+        This is the sample application for the tutorial."
     contact:
       contact: "Contact"
-      contactpage: "contact page"
+      up: "Contact the Ruby on Rails Tutorial about the sample app at the 
+        <a href='http://www.railstutorial.org/contact'>contact page</a> ."
     help:
       help: "Help"
-      ruby: "Ruby on Rails Tutorial"
-      rails: "Rails Tutorial help section"
-      up: "Get help on the Ruby on Rails Tutorial at the %{ruby_link} 
-        To get help on this sample app, see the %{rails_link} book."
+      up: "Get help on the Ruby on Rails Tutorial at the 
+        <a href='http://www.railstutorial.org/help'>Rails Tutorial help section</a> 
+        To get help on this sample app, see the 
+        <a href='http://www.railstutorial.org/book'>Ruby on Rails Tutorial</a> book."
   layouts:
     application:
       rubyrails: "Ruby on Rails Tutorial Sample App"
-
+  helpers:
+    application_helper:
+      rubyrails: "Ruby on Rails Tutorial Sample App"
