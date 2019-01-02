@@ -30,10 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  name: "sample app"
   static_pages:
     home:
       home: "Home"
-      sample: "Sample App"
+      sample: "Welcome to the Sample App"
+      sign_up: "Sign up now!"
       up: "This is the home page for the 
         <a href='http://www.railstutorial.org/'>Ruby on Rails Tutorial</a> sample application."
     about:
@@ -56,6 +58,15 @@ en:
   layouts:
     application:
       rubyrails: "Ruby on Rails Tutorial Sample App"
+    _footer:
+      up: "The <a href='http://www.railstutorial.org/''>
+        Ruby on Rails Tutorial</a> by <a href='#'>PBD</a>"
+    _header:
+      login: "Login"
   helpers:
     application_helper:
       rubyrails: "Ruby on Rails Tutorial Sample App"
+  users:
+    new:
+      sign_up: "Sign up"
+      up: "This will be a signup page for new users."
