@@ -31,3 +31,7 @@
 /config/master.key
 .idea
 <?xml version="1.0" encoding="UTF-8"?>
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
