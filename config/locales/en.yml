@@ -33,9 +33,10 @@ en:
   name: "sample app"
   rails_logo: "Rails logo"
   err: "The form contains %{errors_count}."
-  messenger: "Sorry, no data found"
+  
   static_pages:
     home:
+      home: "Home"
       sample: "Welcome to the Sample App"
       sign_up: "Sign up now!"
       up: "This is the home page for the 
@@ -57,6 +58,7 @@ en:
         <a href='http://www.railstutorial.org/help'>Rails Tutorial help section</a> 
         To get help on this sample app, see the 
         <a href='http://www.railstutorial.org/book'>Ruby on Rails Tutorial</a> book."
+  
   layouts:
     application:
       rubyrails: "Ruby on Rails Tutorial Sample App"
@@ -65,6 +67,14 @@ en:
         Ruby on Rails Tutorial</a> by <a href='#'>Pham Ba Dat</a>"
     header:
       login: "Login"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
+      log_in: "Log in"
+    messenger:
+      no_data: "Sorry, no data found"
+      login_fail: "Invalid email/password combination"
   helpers:
     application_helper:
       rubyrails: "Ruby on Rails Tutorial Sample App"
@@ -73,6 +83,14 @@ en:
       sign_up: "Sign up"
       up: "This will be a signup page for new users."
       btntext: "Create my account"
+  sessions:
+    new:
+      log_in: "Log in"
+      email: "Email"
+      password: "Password"
+      sing_up: "Sign up now!"
+      new_user: "New user? "
+  
   activerecord:
     attributes:
       user:
