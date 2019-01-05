@@ -6,5 +6,5 @@ user:
   password:
     min_length: 6
     max_length: 30
-  size:
+  gravatar:
     size: 80

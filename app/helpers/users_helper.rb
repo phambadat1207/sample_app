@@ -1,7 +1,7 @@
 require "digest"
 
 module UsersHelper
-  def gravatar_for user, size: Settings.user.size.size
+  def gravatar_for user, size: Settings.user.gravatar.size
     md5 = Digest::MD5.new
     gravatar_id = md5.hexdigest(user.email.downcase)
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
