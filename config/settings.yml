@@ -13,5 +13,6 @@ user:
     minimum: 6
 session:
   remember_me: "1"
+time_reset: 2
 per_page:
   user: 20
