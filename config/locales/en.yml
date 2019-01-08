@@ -72,6 +72,7 @@ en:
       settings: "Settings"
       log_out: "Log out"
       log_in: "Log in"
+      account: "Account"
     messenger:
       no_data: "Sorry, no data found"
       login_fail: "Invalid email/password combination"
@@ -89,6 +90,8 @@ en:
       email: "Email"
       password: "Password"
       sing_up: "Sign up now!"
+      remember_me: "Remember Me"
+      remember: "Remember me on this computer"
       new_user: "New user? "
   
   activerecord:

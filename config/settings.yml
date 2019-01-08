@@ -8,3 +8,5 @@ user:
     max_length: 30
   gravatar:
     size: 80
+session:
+  remember_me: "1"
