@@ -76,6 +76,7 @@ en:
     messenger:
       no_data: "Sorry, no data found"
       login_fail: "Invalid email/password combination"
+      you_sure: "Are you sure?"
   helpers:
     application_helper:
       rubyrails: "Ruby on Rails Tutorial Sample App"
@@ -83,7 +84,16 @@ en:
     new:
       sign_up: "Sign up"
       up: "This will be a signup page for new users."
-      btntext: "Create my account"
+      create_acc: "Create my account"
+    user:
+      delete: "Delete"
+    edit:
+      edit_user: "Edit user"
+      save: "Save changes"
+      change: "Change"
+      update_profile: "Update Your Profile"
+    index:
+      all_user: "All Users"
   sessions:
     new:
       log_in: "Log in"
@@ -93,6 +103,13 @@ en:
       remember_me: "Remember Me"
       remember: "Remember me on this computer"
       new_user: "New user? "
+  controllers:
+    concerns:
+      welcome: "Welcome to the Sample App"
+      update_profile: "Profile updated"
+      delete_user: "User deleted"
+      unsuccessfully_user: "The user was unsuccessfully deleted"
+      please_lg: "Please log in."
   
   activerecord:
     attributes:
