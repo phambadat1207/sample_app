@@ -16,3 +16,8 @@ session:
 time_reset: 2
 per_page:
   user: 20
+  microposts: 30
+micropost:
+  maximum_length: 140
+picture:
+  max_size: 5

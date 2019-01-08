@@ -9,7 +9,10 @@ class UsersController < ApplicationController
       per_page: Settings.per_page.user
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.paginate page: params[:page],
+      per_page: Settings.per_page.microposts
+  end
 
   def new
     @user = User.new
@@ -38,13 +41,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    if @user.delete
-      flash[:success] = t "controllers.concerns.delete_user"
-      redirect_to users_path
-    else
-      flash[:danger] = t "controllers.concerns.unsuccessfully_user"
-      redirect_to root_path
-    end
+    @user.delete
+    flash[:success] = t "controllers.concerns.delete_user"
+    redirect_to users_path
+  rescue StandardError
+    flash[:danger] = t "controllers.concerns.unsuccessfully_user"
+    redirect_to root_path
   end
 
   private
