@@ -30,9 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  name: "sample app"
+  name: "Sample App"
   rails_logo: "Rails logo"
   err: "The form contains %{errors_count}."
+  hi: "Hi %{name},"
+  welcome: "Welcome to the Sample App! Click on the link below to activate your account:"
+  activate: "Activate"
   
   static_pages:
     home:
@@ -77,6 +80,8 @@ en:
       no_data: "Sorry, no data found"
       login_fail: "Invalid email/password combination"
       you_sure: "Are you sure?"
+      account_no_active: "Account not activated.
+        Please check your email for the activation link. "
   helpers:
     application_helper:
       rubyrails: "Ruby on Rails Tutorial Sample App"
@@ -110,7 +115,12 @@ en:
       delete_user: "User deleted"
       unsuccessfully_user: "The user was unsuccessfully deleted"
       please_lg: "Please log in."
-  
+      check_email: "Please check your email to activate your account."
+      account_activated: "Account activated!"
+      invalid_link: "Invalid activation link"
+  mailer:
+    account_activation: "Account activation"
+
   activerecord:
     attributes:
       user:
