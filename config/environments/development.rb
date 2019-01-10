@@ -46,7 +46,8 @@ Rails.application.configure do
     password: ENV["gmail_password"],
     authentication: "plain",
     enable_starttls_auto: true
-}
+    }
+
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
