@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  default_url_options :host => "localhost:3000"
   root "static_pages#home"
   
   get "password_resets/new"
@@ -19,4 +18,5 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets, only: %i(new create edit update)
+  resources :microposts, only: [:create, :destroy]
 end
