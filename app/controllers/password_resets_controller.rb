@@ -16,6 +16,9 @@ class PasswordResetsController < ApplicationController
       flash.now[:danger] = t "controllers.concerns.email_not_found"
       render :new
     end
+  rescue StandardError
+    flash[:danger] = t "controllers.concerns.time_out"
+    redirect_to login_path
   end
 
   def edit; end

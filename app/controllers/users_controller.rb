@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :load_user, only: %i(show edit update destroy correct_user)
-  before_action :logged_in_user, only: %i(index edit update destroy)
+  before_action :logged_in_user, only: %i(index edit update destroy
+    following followers)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
@@ -20,13 +21,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
-    if @user.save
-      @user.send_activation_email
-      flash[:info] = t "controllers.concerns.check_email"
-      redirect_to root_path
-    else
-      render :new
-    end
+    @user.save!
+    @user.send_activation_email
+    flash[:info] = t "controllers.concerns.check_email"
+    redirect_to root_path
+  rescue StandardError
+    flash[:danger] = t "controllers.concerns.time_out"
+    render :new
   end
 
   def edit; end
@@ -47,6 +48,30 @@ class UsersController < ApplicationController
   rescue StandardError
     flash[:danger] = t "controllers.concerns.unsuccessfully_user"
     redirect_to root_path
+  end
+
+  def following
+    @title = t "micropost.following"
+    @user = User.find_by params[:id]
+    if @user
+      @users = @user.following.paginate(page: params[:page])
+      render "show_follow"
+    else
+      flash[:danger] = t "controllers.concerns.an_error"
+      redirect_to root_path
+    end
+  end
+
+  def followers
+    @title = t "micropost.followers"
+    @user = User.find_by params[:id]
+    if @user
+      @users = @user.followers.paginate(page: params[:page])
+      render "show_follow"
+    else
+      flash[:danger] = t "controllers.concerns.an_error"
+      redirect_to root_path
+    end
   end
 
   private

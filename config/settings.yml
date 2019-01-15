@@ -19,5 +19,6 @@ per_page:
   microposts: 30
 micropost:
   maximum_length: 140
+  gravatar_for_size: 30
 picture:
   max_size: 5
