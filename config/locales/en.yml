@@ -130,6 +130,8 @@ en:
       micropost_created: "Micropost created!"
       micropost_delete: "Micropost deleted"
       cant_delete: "Micropost can't be deleted"
+      time_out: "The time for sending mail has expired !"
+      an_error: "An error has occurred, please try again!"
   mailers:
     user:
       account_activation: "Account activation"
@@ -154,6 +156,12 @@ en:
     with_posts: "Microposts (%{count})"
     posted: "Posted %{date} ago."
     delete: "Delete"
+    following: "Following"
+    followers: "Followers"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    view_profile: "view my profile"
+    microposts: "Microposts:"
 
   activerecord:
     attributes:
